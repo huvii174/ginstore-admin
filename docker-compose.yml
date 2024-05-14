@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  gin-admin:
+    image: gin-admin
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    networks:
+      - gin-net
+
+  db:
+    image: gin-db
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "1704:3306"  # Expose MySQL on port 3306 to both host and external networks
+    networks:
+      - gin-net
+
+volumes:
+  db_data:
+
+networks:
+  gin-net:
