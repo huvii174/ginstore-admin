@@ -85,7 +85,7 @@
                 <li class="nav-item">
                     <a href="{{ route('vote.index') }}" class="nav-link">
                         <i class="link-icon" data-feather="message-circle"></i>
-                        <span class="link-title">Vote && Comment</span>
+                        <span class="link-title">Vote & Comment</span>
                     </a>
                 </li>
                 <li class="nav-item nav-category">...</li>
